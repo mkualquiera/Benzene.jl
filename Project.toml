@@ -1,0 +1,7 @@
+name = "Benzene"
+uuid = "a89f3ec5-47ca-4f38-a936-37dd4acc4b70"
+authors = ["1Macho <ozjuanpa@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
