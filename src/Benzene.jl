@@ -1,6 +1,5 @@
 module Benzene
 
-using Base: Symbol, func_for_method_checked
 import JSON
 
 struct ComputationNode
@@ -51,7 +50,8 @@ function replacesymbolwithexpression!(target::Any,sym::Symbol,
     end
 end
 
-function buildfunctionfromnodes(nodes::Dict{Symbol,ComputationNode},name::String)::Expr
+function buildfunctionfromnodes(nodes::Dict{Symbol,ComputationNode},
+        name::String)::Expr
     nameparsed = Meta.parse(name)
     if typeof(nameparsed) != Symbol
         error(">" + name + "< cannot be parsed as a symbol.")
